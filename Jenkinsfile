@@ -14,8 +14,6 @@ pipeline {
                 sh 'chmod +x ./gradlew'
                 echo '===> Building...'
                 sh './gradlew build'
-                echo '===> Running built Jar file...'
-                sh 'java -jar build/libs/CoroBot-1.0-SNAPSHOT-all.jar'
             }
         }
     }
