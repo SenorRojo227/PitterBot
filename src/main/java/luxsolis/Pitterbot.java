@@ -8,7 +8,7 @@ import net.dv8tion.jda.api.requests.GatewayIntent;
 
 public class Pitterbot {
     public static Dotenv dotenv;
-    public static String version = "0.1.0-dev";
+    public static String version = "0.1.0-alpha";
 
     public static void main(String[] arguments) throws Exception {
         dotenv = Dotenv.load();
