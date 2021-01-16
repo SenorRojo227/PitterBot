@@ -1,5 +1,10 @@
 package luxsolis.utils;
 
+/* ConsoleColour
+ *      Definitions to console colours
+ */
+
+// TODO: Console colours don't work on all terminals; find better way to do this
 public class ConsoleColour {
     // Reset
     public static final String RESET = "\033[0m";  // Text Reset

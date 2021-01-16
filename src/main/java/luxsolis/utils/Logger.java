@@ -3,6 +3,10 @@ package luxsolis.utils;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/* Logger
+ *      Utility for logging information
+ */
+
 public class Logger {
     private static Logger logger = null;
 

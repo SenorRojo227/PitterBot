@@ -6,9 +6,13 @@ import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Activity;
 import net.dv8tion.jda.api.requests.GatewayIntent;
 
+/* Pitterbot
+ *      Entry-point and main class for the Bot
+ */
+
 public class Pitterbot {
     public static Dotenv dotenv;
-    public static String version = "0.1.0-alpha";
+    public static String version = "0.1.0-dev";
 
     public static void main(String[] arguments) throws Exception {
         dotenv = Dotenv.load();
