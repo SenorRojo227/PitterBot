@@ -1,10 +1,10 @@
 pipeline {
-    agent { docket { image 'maven:3.3.3' } }
+    agent { docker { image 'gradle:6.7-jdk8' } }
     stages {
         stage('build') {
             steps {
                 echo '===> Building...'
-                sh 'mvn --version'
+                sh 'gradlew build'
             }
         }
     }
