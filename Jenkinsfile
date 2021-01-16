@@ -8,6 +8,8 @@ pipeline {
     stages {
         stage('build') {
             steps {
+                echo '===> Making ./gradlew executable'
+                sh 'chmod +x ./gradlew'
                 echo '===> Building...'
                 sh './gradlew build'
             }
