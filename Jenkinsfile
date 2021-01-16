@@ -8,8 +8,6 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo '===> Stopping old Bot process...'
-                sh 'pm2 stop 0'
                 echo '===> Creating Gradle Wrapper...'
                 sh 'gradle wrapper'
                 echo '===> Making ./gradlew executable...'
@@ -18,8 +16,6 @@ pipeline {
                 sh './gradlew build'
                 echo '===> Running built Jar file...'
                 sh 'java -jar build/libs/CoroBot-1.0-SNAPSHOT-all.jar'
-                echo '===> Starting new Bot process...'
-                sh 'pm2 start pitterbot.sh --name=PitterBot'
             }
         }
     }
