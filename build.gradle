@@ -9,7 +9,7 @@ mainClassName = 'luxsolis.Pitterbot'
 group 'luxsolis'
 version '1.0-SNAPSHOT'
 
-def jdaVersion = '4.2.0_224'
+def jdaVersion = '4.2.0_168'
 
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
