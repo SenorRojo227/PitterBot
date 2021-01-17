@@ -17,6 +17,7 @@ import java.util.HashMap;
 
 public class CommandHelp extends Command {
     private static HashMap<String, Command> utilityCommands = new HashMap<>();
+    private static HashMap<String, Command> testingCommands = new HashMap<>();
     private static HashMap<String, Command> otherCommands = new HashMap<>();
 
     @Override
@@ -49,6 +50,20 @@ public class CommandHelp extends Command {
             }
         }
 
+        if (testingCommands.size() > 0) {
+            embedHelp.addField("**Testing Commands**", "For testing purposes! (Doesn't provide anything useful to the general player)", false);
+            for (Command command : testingCommands.values()) {
+                embedHelp.addField(Commands.prefix + command.getCommandLabel(), command.getDescription(), true);
+            }
+        }
+
+        if (otherCommands.size() > 0) {
+            embedHelp.addField("**Other Commands**", "Commands without a category.", false);
+            for (Command command : otherCommands.values()) {
+                embedHelp.addField(Commands.prefix + command.getCommandLabel(), command.getDescription(), true);
+            }
+        }
+
         embedHelp.setDescription("Here's a list of commands you can use!\n");
         embedHelp.setFooter("Requested by " + message.getAuthor().getAsTag());
         embedHelp.setTimestamp(OffsetDateTime.now());
@@ -65,6 +80,9 @@ public class CommandHelp extends Command {
             switch (command.getCommandGroup()) {
                 case UTILITY:
                     utilityCommands.put(command.getCommandLabel(), command);
+                    break;
+                case TESTING:
+                    testingCommands.put(command.getCommandLabel(), command);
                     break;
                 default:
                     otherCommands.put(command.getCommandLabel(), command);
