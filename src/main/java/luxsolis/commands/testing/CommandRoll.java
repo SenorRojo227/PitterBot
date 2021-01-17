@@ -32,6 +32,7 @@ public class CommandRoll extends Command {
         String[][] skills = new String[NUM_SKILLS][9];
         String[] traits = new String[NUM_TRAITS];
 
+        // TODO: Maybe add a check for this? Seems useless to do this multiple times ;)
         try {
             Scanner scan;
 
@@ -53,10 +54,12 @@ public class CommandRoll extends Command {
         int roll = -1;
         for (String[] skill : skills) {
             if (args[1].equalsIgnoreCase(skill[1])) {
-                if (skill[6].equals("-"))
+                if (skill[6].equals("-")) {
                     roll = 100;
-                else
+                } else {
                     roll = Integer.parseInt(skill[6]);
+                }
+
                 break;
             }
         }
