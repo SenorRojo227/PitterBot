@@ -80,13 +80,13 @@ public class CommandRoll extends Command {
             }
         }
 
-        if (getSuccess(roll))
-            Logger.info("Success!", "Roll");
-        else if (roll < 0)
-            Logger.info("Error: Could not locate " + args[1] + "!", "Roll");
-        else
-            Logger.info("Failure!", "Roll");
-
+        if (getSuccess(roll)) {
+            message.getChannel().sendMessage("Success!").queue();
+        } else if (roll < 0) {
+            message.getChannel().sendMessage("Error: Could not locate " + args[1] + "!").queue();
+        } else {
+            message.getChannel().sendMessage("Failure!").queue();
+        }
     }
 
     private static boolean getSuccess(int acc) {
