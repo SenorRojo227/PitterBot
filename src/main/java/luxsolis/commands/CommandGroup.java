@@ -6,4 +6,5 @@ package luxsolis.commands;
 
 public enum CommandGroup {
     UTILITY,
+    TESTING
 }

@@ -3,6 +3,7 @@ package luxsolis;
 import io.github.cdimascio.dotenv.Dotenv;
 import luxsolis.commands.Commands;
 import luxsolis.commands.utility.CommandHelp;
+import luxsolis.commands.testing.CommandRoll;
 import luxsolis.listeners.ListenerMessageReceived;
 import luxsolis.utils.Logger;
 import net.dv8tion.jda.api.JDA;
@@ -45,6 +46,7 @@ public class Pitterbot {
         Commands.setPrefix("p!");
 
         Logger.info("Registering commands...", "CMD");
+        Commands.registerCommand(new CommandRoll());
         CommandHelp commandHelp = new CommandHelp();
         Commands.registerCommand(commandHelp);
         commandHelp.cacheCommandCategories();

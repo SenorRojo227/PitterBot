@@ -1,17 +1,22 @@
-package commands;
+package luxsolis.commands.testing;
 
+import luxsolis.commands.Command;
+import luxsolis.commands.CommandGroup;
+import luxsolis.utils.Logger;
 import net.dv8tion.jda.api.entities.Message;
-import utils.Logger;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Roll extends Command {
+/* CommandGroup
+ *      Provides the 'roll' command
+ */
 
+public class CommandRoll extends Command {
     public String getCommandLabel() {
-        return "Roll";
+        return "roll";
     }
 
     public String getDescription() {
@@ -19,11 +24,10 @@ public class Roll extends Command {
     }
 
     public CommandGroup getCommandGroup() {
-        return null;
+        return CommandGroup.TESTING;
     }
 
     public void execute(Message message, String[] args) {
-
         final int NUM_SKILLS = 71, NUM_TRAITS = 32;
         String[][] skills = new String[NUM_SKILLS][9];
         String[] traits = new String[NUM_TRAITS];
@@ -31,20 +35,19 @@ public class Roll extends Command {
         try {
             Scanner scan;
 
-            //Skill list scan
+            // Skill list scan
             scan = new Scanner(new File("src/main/resources/skill_list.txt"));
             for (int i = 0; i < NUM_SKILLS; i++) {
                 skills[i] = scan.nextLine().split("\t");
             }
 
-            //Trait list scan
+            // Trait list scan
             scan = new Scanner(new File("src/main/resources/trait_list.txt"));
             traits = scan.nextLine().split(",");
 
             scan.close();
         } catch (FileNotFoundException e) {
-            System.out.println("An error occurred.");
-            e.printStackTrace();
+            Logger.error("An error occurred (" + e + ")", "ROLL");
         }
 
         int roll = -1;
@@ -86,9 +89,8 @@ public class Roll extends Command {
 
     }
 
-    private static boolean getSuccess(int Acc) {
+    private static boolean getSuccess(int acc) {
         int rand = new Random().nextInt(100) + 1;
-        return rand <= Acc;
+        return rand <= acc;
     }
-
 }
