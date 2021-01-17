@@ -8,6 +8,8 @@ pipeline {
     stages {
         stage('build') {
             steps {
+                echo '===> Making ./gradle-wrapper executable...'
+                sh 'chmod +x ./gradle-wrapper.sh'
                 echo '===> Gradle Wrapper check...'
                 sh './gradle-wrapper.sh'
                 echo '===> Making ./gradlew executable...'
