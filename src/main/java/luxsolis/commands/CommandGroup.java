@@ -5,5 +5,5 @@ package luxsolis.commands;
  */
 
 public enum CommandGroup {
-    TEAM,
+    UTILITY,
 }

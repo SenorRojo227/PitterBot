@@ -1,6 +1,9 @@
 package luxsolis;
 
 import io.github.cdimascio.dotenv.Dotenv;
+import luxsolis.commands.Commands;
+import luxsolis.commands.utility.CommandHelp;
+import luxsolis.listeners.ListenerMessageReceived;
 import luxsolis.utils.Logger;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
@@ -30,7 +33,20 @@ public class Pitterbot {
                 ).build();
         Logger.success("Finished building JDA API", "JDA");
 
+        Logger.info("Registering Listeners...", "LSTNR");
+        api.addEventListener(new ListenerMessageReceived());
+        Logger.info("> Registered 'ListenerMessageReceived'!", "LSTNR");
+        Logger.success("Registered Listeners!", "LSTNR");
+
         Logger.info("Setting Bot Presence", "BOT");
         api.getPresence().setActivity(Activity.playing("Coromon! || v" + version));
+
+        Logger.info("Setting prefix to 'p!'", "CMD");
+        Commands.setPrefix("p!");
+
+        Logger.info("Registering commands...", "CMD");
+        CommandHelp commandHelp = new CommandHelp();
+        Commands.registerCommand(commandHelp);
+        commandHelp.cacheCommandCategories();
     }
 }
