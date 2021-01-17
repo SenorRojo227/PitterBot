@@ -1,0 +1,71 @@
+AGILITY TRAINING.png	Agility Training	Normal.png	Normal	3	-	-	Status	No
+BEAT UP.png	Beat Up	Normal.png	Normal	4	20	100	Physical	Yes
+BODY BLAST.png	Body Blast	Heavy.png	Heavy	5	100	100	Physical	Yes
+BOULDER BARRAGE.png	Boulder Barrage	Sand.png	Sand	4	65	95	Physical	No
+BUBBLE BURST.png	Bubble Burst	Water.png	Water	3	40	100	Special	No
+CHOMP.png	Chomp	Foul.png	Foul	2	40	100	Physical	Yes
+CINDER.png	Cinder	Fire.png	Fire	3	40	100	Special	No
+CLAW.png	Claw	Cut.png	Cut	2	40	100	Physical	Yes
+CLEARING WIND.png	Clearing Wind	Ice.png	Ice	3	60	100	Special	No
+COIN SNATCH.png	Coin Snatch	Normal.png	Normal	4	-	-	Status	No
+CONCENTRATE.png	Concentrate	Normal.png	Normal	3	-	-	Status	No
+CONSTRICT.png	Constrict	Normal.png	Normal	4	-	100	Status	No
+CUTE POSE.png	Cute Pose	Normal.png	Normal	2	-	-	Status	No
+DISABLE.png	Disable	Magic.png Magic	4	-	100	Status	No
+DISTRACT.png	Distract	Normal.png	Normal	3	-	-	Status	No
+DOUBLE SLASH.png	Double Slash	Cut.png	Cut	5	75	-	Physical	Yes
+DOUBLE STING.png	Double Sting	Normal.png	Normal	4	30	95	Physical	Yes
+DRAIN.png	Drain	Magic.png	Magic	3	40	100	Special	No
+ELECTRIC POUND.png	Electric Pound	Electric.png	Electric	3	20	90	Physical	Yes
+ELECTRIFY.png	Electrify	Electric.png	Electric	2	-	-	Status	No
+ENERGY DRAIN.png	Energy Drain	Magic.png	Magic	3	40	100	Special	No
+EPIPHANY.png	Epiphany	Normal.png	Normal	3	-	-	Status	No
+FACE SLAP.png	Face Slap	Normal.png	Normal	6	60	100	Physical	Yes
+FACTORY RESET.png	Factory Reset	Normal.png	Normal	5	-	-	Status	No
+FADE ATTACK.png	Fade Attack	Foul.png	Foul	3	50	90	Physical	Yes
+FAST STRIKE.png	Fast Strike	Normal.png	Normal	3	40	100	Physical	Yes
+FEELERS.png	Feelers	Normal.png	Normal	4	-	100	Status	No
+FEINT SPURTS.png	Feint Spurts	Water.png	Water	4	65	100	Special	No
+FROST CHOMP.png	Frost Chomp	Ice.png	Ice	3	40	100	Physical	Yes
+FROST WEB.png	Frost Web	Ice.png	Ice	5	-	100	Status	No
+GLACIER.png	Glacier	Ice.png	Ice	6	80	100	Special	No
+HOWL.png	Howl	Ghost.png	Ghost	5	-	-	Status	No
+HYPNO WAVE.png	Hypno Wave	Ghost.png	Ghost	4	-	80	Status	No
+ICE WALL.png	Ice Wall	Ice.png	Ice	3	-	-	Status	No
+IGNITE.png	Ignite	Fire.png	Fire	4	-	-	Status	No
+IGNORE PAIN.png	Ignore Pain	Normal.png	Normal	3	-	-	Status	No
+LAST STAND.png	Last Stand	Normal.png	Normal	6	-	-	Status	No
+LIGHTNING STRIKE.png	Lightning Strike	Electric.png	Electric	5	60	95	Special	No
+MIGHTY ROAR.png	Mighty Roar	Normal.png	Normal	2	-	100	Status	No
+PIERCING HORNS.png	Piercing Horns	Fire.png	Fire	4	60	100	Physical	Yes
+POCKET SAND.png	Pocket Sand	Sand.png	Sand	2	-	100	Status	No
+POISON CHOMP.png	Poison Chomp	Poison.png	Poison	4	80	100	Physical	Yes
+POISON STING.png	Poison Sting	Poison.png	Poison	1	20	100	Physical	Yes
+POWER SLAP.png	Power Slap	Electric.png	Electric	2	30	100	Physical	Yes
+POWER TALONS.png	Power Talons	Electric.png	Electric	8	90	90	Physical	Yes
+PRECISION EYE.png	Precision Eye	Electric.png	Electric	5	-	-	Status	No
+PROPELLOR PUNCH.png	Propellor Punch	Normal.png	Normal	4	50	90	Physical	Yes
+QUAD VOLT.png	Quad Volt	Electric.png	Electric	4	55	100	Special	No
+-	Quick Charge	Normal.png	Normal	2	-	-	Status	No
+RAGE.png	Rage	Normal.png	Normal	3	-	-	Status	No
+SANDBALL.png	Sandball	Sand.png	Sand	3	40	100	Special	No
+SANDMAN.png	Sandman	Sand.png	Sand	4	-	100	Status	No
+SCRATCH.png	Scratch	Cut.png	Cut	2	40	100	Physical	Yes
+SHADEWALKER.png	Shadewalker	Ghost.png	Ghost	3	40	100	Physical	Yes
+SLAM.png	Slam	Normal.png	Normal	2	40	100	Physical	Yes
+SMOKESCREEN.png	Smokescreen	Fire.png	Fire	4	-	-	Status	No
+SPARK DISC.png	Spark Disc	Electric.png	Electric	8	50	100	Special	No
+SPARK WALL.png	Spark Wall	Electric.png	Electric	7	-	-	Status	No
+SPLASH.png	Splash	Water.png	Water	4	-	100	Special	No
+STATIC FUR.png	Static Fur	Electric.png	Electric	4	-	-	Status	No
+STREAMLINE.png	Streamline	Normal.png	Normal	4	-	-	Status	No
+-	Super Punch	Electric.png	Electric	9	160	100	Physical	Yes
+SURGE PUNCH.png	Surge Punch	Electric.png	Electric	4	70	95	Special	Yes
+SWARM DIVERSION.png	Swarm Diversion	Electric.png	Electric	5	-	-	Status	No
+TAIL SPIN.png	Tail Spin	Normal.png	Normal	3	25	90	Physical	Yes
+TASER.png	Taser	Electric.png	Electric	3	-	100	Status	No
+TOUGHEN UP.png	Toughen Up	Normal.png	Normal	3	-	-	Status	No
+VENOMOUS BEES.png	Venomous Bees	Poison.png	Poison	3	50	-	Special	No
+VOLT LICK.png	Volt Lick	Electric.png	Electric	3	-	100	Status	Yes
+VOODOO.png	Voodoo	Magic.png	Magic	5	70	90	Special	No
+WIND BLAST.png	Wind Blast	Air.png	Air	4	85	95	Special	No
