@@ -6,6 +6,8 @@ import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
+import java.util.Locale;
+
 /* ListenerMessageReceived
  *      Implements behaviour for when messages are received
  */
@@ -20,7 +22,7 @@ public class ListenerMessageReceived extends ListenerAdapter {
 
         if (content.startsWith(Commands.prefix)) {
             String[] commandArgs = content.replace(Commands.prefix, "").split( " ");
-            Command command = Commands.getCommand(commandArgs[0]);
+            Command command = Commands.getCommand(commandArgs[0].toLowerCase());
 
             if (command != null)
                 command.execute(message, commandArgs);
