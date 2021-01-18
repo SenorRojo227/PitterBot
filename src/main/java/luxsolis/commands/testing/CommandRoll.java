@@ -15,6 +15,12 @@ import java.util.Scanner;
  */
 
 public class CommandRoll extends Command {
+    private final int NUM_SKILLS = 71, NUM_TRAITS = 32;
+    private String[][] skills = new String[NUM_SKILLS][9];
+    private String[] traits = new String[NUM_TRAITS];
+
+    private boolean initialisedLists = false;
+
     public String getCommandLabel() {
         return "roll";
     }
@@ -28,27 +34,29 @@ public class CommandRoll extends Command {
     }
 
     public void execute(Message message, String[] args) {
-        final int NUM_SKILLS = 71, NUM_TRAITS = 32;
-        String[][] skills = new String[NUM_SKILLS][9];
-        String[] traits = new String[NUM_TRAITS];
+        if (!initialisedLists) {
+            Logger.warn("Skill and Trait lists haven't been initialised! Initialising them now...");
 
-        // TODO: Maybe add a check for this? Seems useless to do this multiple times ;)
-        try {
-            Scanner scan;
+            try {
+                Scanner scan;
 
-            // Skill list scan
-            scan = new Scanner(new File("src/main/resources/skill_list.txt"));
-            for (int i = 0; i < NUM_SKILLS; i++) {
-                skills[i] = scan.nextLine().split("\t");
+                // Skill list scan
+                scan = new Scanner(new File("src/main/resources/skill_list.txt"));
+                for (int i = 0; i < NUM_SKILLS; i++) {
+                    skills[i] = scan.nextLine().split("\t");
+                }
+
+                // Trait list scan
+                scan = new Scanner(new File("src/main/resources/trait_list.txt"));
+                traits = scan.nextLine().split(",");
+
+                scan.close();
+                initialisedLists = true;
+
+                Logger.success("Successfully initialised Skill and Trait lists!");
+            } catch (FileNotFoundException e) {
+                Logger.error("An error occurred (" + e + ")", "ROLL");
             }
-
-            // Trait list scan
-            scan = new Scanner(new File("src/main/resources/trait_list.txt"));
-            traits = scan.nextLine().split(",");
-
-            scan.close();
-        } catch (FileNotFoundException e) {
-            Logger.error("An error occurred (" + e + ")", "ROLL");
         }
 
         int roll = -1;
