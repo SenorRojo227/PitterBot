@@ -50,5 +50,7 @@ public class Pitterbot {
         CommandHelp commandHelp = new CommandHelp();
         Commands.registerCommand(commandHelp);
         commandHelp.cacheCommandCategories();
+
+        Logger.success("Done!");
     }
 }
