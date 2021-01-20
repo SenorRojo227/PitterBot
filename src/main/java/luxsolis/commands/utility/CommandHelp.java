@@ -24,6 +24,11 @@ public class CommandHelp extends Command {
     public String getCommandLabel() {
         return "help";
     }
+    
+    @Override
+    public String getParameters() {
+        return null;
+    }
 
     @Override
     public String getDescription() {
@@ -46,21 +51,21 @@ public class CommandHelp extends Command {
         if (utilityCommands.size() > 0) {
             embedHelp.addField("**Utility Commands**", "These commands are quite useful!", false);
             for (Command command : utilityCommands.values()) {
-                embedHelp.addField(Commands.prefix + command.getCommandLabel(), command.getDescription(), true);
+                embedHelp.addField(Commands.prefix + command.getCommandLabel() + " " + command.getParameters(), command.getDescription(), true);
             }
         }
 
         if (testingCommands.size() > 0) {
             embedHelp.addField("**Testing Commands**", "For testing purposes! (Doesn't provide anything useful to the general player)", false);
             for (Command command : testingCommands.values()) {
-                embedHelp.addField(Commands.prefix + command.getCommandLabel(), command.getDescription(), true);
+                embedHelp.addField(Commands.prefix + command.getCommandLabel() + " " + command.getParameters(), command.getDescription(), true);
             }
         }
 
         if (otherCommands.size() > 0) {
             embedHelp.addField("**Other Commands**", "Commands without a category.", false);
             for (Command command : otherCommands.values()) {
-                embedHelp.addField(Commands.prefix + command.getCommandLabel(), command.getDescription(), true);
+                embedHelp.addField(Commands.prefix + command.getCommandLabel() + " " + command.getParameters(), command.getDescription(), true);
             }
         }
 
